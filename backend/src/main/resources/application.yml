@@ -8,7 +8,7 @@ spring:
       ddl-auto: update
     open-in-view: false
 server:
-  port: 9090
+  port: ${PORT:9090}
 
 app:
   jwt:
