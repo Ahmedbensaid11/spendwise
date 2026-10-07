@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/${DB_NAME:spendwise}
+    username: ${DB_USER:spendwise}
+    password: ${DB_PASSWORD:change_me_locally}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+server:
+  port: 9090
+
+app:
+  jwt:
+    # Override with a private random secret of at least 32 characters in production.
+    secret: ${JWT_SECRET:spendwise-local-development-secret-please-change}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
