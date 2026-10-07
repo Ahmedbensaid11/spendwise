@@ -11,6 +11,8 @@ server:
   port: ${PORT:9090}
 
 app:
+  cors:
+    allowed-origins: "${APP_CORS_ALLOWED_ORIGINS:http://localhost:5173,http://127.0.0.1:5173}"
   jwt:
     # Override with a private random secret of at least 32 characters in production.
     secret: ${JWT_SECRET:spendwise-local-development-secret-please-change}
